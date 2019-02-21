@@ -63,3 +63,37 @@ curl -H "Accept: application/json" -H "Content-type: application/json" -X  GET h
     }
 ```
 
+
+
+
+## Setup Local
+
+### Requisitos
+-   pipenv https://github.com/pypa/pipenv
+-   postgresql
+
+### Passo a passo
+1) Clonar repositório git clone git@github.com:rcsalles/nixt.git
+2) Criar virtualenv:  pipenv shell
+3) Instalar dependências: pipenv install
+4) Copiar/Renomear sample.env para .env
+5) Editar .env e definir DATABASE_URL para banco local ou remoto
+6) Rodar migração para banco (bando já deve ter sido criado):  python manage.py migrate
+7) Criar super usuário: python manage.py createsuperuser
+8) Rodar servidor: python manage.py runserver 
+9) Acessar http://127.0.0.1:8000/
+
+### Comandos Console
+```bash
+$ git clone git@github.com:rcsalles/nixt.git
+$ cd nixt
+$ pipenv shell
+$ pipenv install
+$ cp sample.env .env
+$ # alterar .env e definir DATABASE_URL para banco local ou remoto
+$ python manage.py migrate
+$ # criar admin para sistema
+$ python manage.py createsuperuser
+$ python manage.py runserver
+$
+```
