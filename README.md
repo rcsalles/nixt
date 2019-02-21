@@ -43,7 +43,7 @@ Todos os valores são opcionais e quando informados são aplicados ao filtro
 
 ### Requisição:
 
--   @data_inicio : data de inicio no formato YYYY-MM-DD
+-   @data_inicial : data de inicio no formato YYYY-MM-DD
 -   @data_final : data final no formato YYYY-MM-DD
 -   @pagador : Nome do pagador
 -   @beneficiario: Nome do beneficiária
